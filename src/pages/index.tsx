@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            OML Vision Tutorial - 5min ⏱️
           </Link>
         </div>
       </div>
@@ -29,11 +29,10 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`OML Vision Docs`}
+      description="A VS Code extension providing UI viewpoints for OML models">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
