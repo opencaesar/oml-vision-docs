@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use and Learn',
-    Svg: require('@site/static/img/vision128x128.svg').default,
+    Svg: require('@site/static/img/undraw_maker_launch.svg').default,
     description: (
       <>
         OML Vision was designed with ease of use in mind for all members of the project team and for users 
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Experienced Open Source Sponsor',
-    Svg: require('@site/static/img/openCAESAR.svg').default,
+    Svg: require('@site/static/img/undraw_teaching.svg').default,
     description: (
       <>
         OML Vision follows under the openCAESAR product line.  openCAESAR is a ontological modeling and 
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Powered by React TSX and VSCode',
-    Svg: require('@site/static/img/vscode_typescript_react.svg').default,
+    Svg: require('@site/static/img/undraw_react.svg').default,
     description: (
       <>
         OML Vision is a Visual Studio Code extension that is built using React and Typescript. This allows type safety,

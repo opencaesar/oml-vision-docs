@@ -29,10 +29,11 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`OML Vision Docs`}
-      description="A VS Code extension providing UI viewpoints for OML models">
+      title={`${siteConfig.title}`}
+      description={`${siteConfig.title}`}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
