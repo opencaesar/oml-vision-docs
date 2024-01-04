@@ -2,46 +2,128 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Get Started
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **OML Vision in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+### VSCode Terminology (Optional)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::tip VSCode Terminology
+
+While not required, it is recommended to read the documentation on VSCode terminology as this documentation will be referencing it heavily.  Read more [here](https://code.visualstudio.com/docs/getstarted/userinterface)
+
+:::
+
+### Install OML Vision
+
+#### VSCode Marketplace (Automatic Installation)
+
+<!-- TODO: Add link to VSCode marketplace -->
+1. Go to VSCode Marketplace and install the extension from there.  
+
+#### VSIX File (Manual Installation)
+
+1. Go to latest release of [OML Vision](https://github.com/opencaesar/oml-vision/releases/latest)
+2. Download the VSIX file
+3. Install the OML Vision extension using the downloaded VSIX file.  Helpful guide [here](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix)
 
 ### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
+#### Windows
+1. Install scoop https://scoop.sh/#/
+2. Use scoop to install `git`, `nodejs`, `nvm`, `yarn`, `java17` and `visual studio code` if not already installed.
 ```bash
-npm init docusaurus@latest my-website classic
+scoop bucket add main
+scoop bucket add extras
+scoop bucket add java
+scoop install main/git
+scoop install main/nodejs
+scoop install main/nvm
+scoop install main/yarn
+scoop install java/openjdk17
+scoop install extras/vscode
+```
+3. The version of VSCode must be at `1.78.2` or newer.
+4. Install the following VSCode extensions if not already installed
+```bash
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-gradle
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
+#### macOS
+1. Install homebrew https://brew.sh
+2. Use scoop to install `git`, `nodejs`, `nvm`, `yarn` and `visual studio code` if not already installed.
 ```bash
-cd my-website
-npm run start
+brew install git
+brew install nodejs
+brew install nvm
+brew install yarn
+brew install openjdk@17
+brew install --cask visual-studio-code
+```
+3. The version of VSCode must be at `1.78.2` or newer.
+4. Install the following VSCode extensions
+```bash
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-gradle
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Load OML Model Data
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+OML Vision is designed to work with OML (Ontological Modeling Language) models.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Start from Scratch
+
+Tutorials on how to create an OML model from scratch can be found [here](https://www.opencaesar.io/oml-tutorials/)
+
+:::danger No OML Vision viewpoints defined in above tutorial
+OML Vision works with viewpoints which will be covered in Create Viewpoints found [here](/docs/tutorial-basics/create-viewpoints)
+:::
+
+### Use existing OML model
+
+<!-- TODO: Change URL to opencaesar organization once documentation is updated -->
+If you want to see the capabilities of OML Vision without creating your own OML model you may use [this OML model](https://github.com/pogi7/kepler16b-example/tree/main) of a hypothetical spacecraft that will explore the [Kepler16b exoplanet](https://en.wikipedia.org/wiki/Kepler-16b).
+
+1. Clone the repository
+```bash
+git clone https://github.com/pogi7/kepler16b-example.git
+```
+2. Open the kepler16b-example OML model in VSCode
+
+### Start OML Vision
+
+1. Your screen should look like this
+![Entry Point](./img/entryPoint.png)
+2. Click the eye icon in the sidebar which will activate the OML Vision extension
+3. Your screen should look like this
+![Activate Extension](./img/activateExtension.png)
+
+4. Data must be loaded into the in-memory database for OML Vision to render views
+5. Click `Run clean` (This will clear the cache i.e.delete the build folder)
+
+:::tip Command Line Interface
+
+You can also run this command from the command line using 
+```java
+./gradlew clean
+```
+Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle) file for a list of commands
+:::
+
+6. Click `Run owlLoad` (This will load data into the in-memory database)
+
+:::tip Command Line Interface
+
+You can also run this command from the command line using 
+```java
+./gradlew owlLoad
+```
+Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle) file for a list of commands
+:::
+
+7. Click `Objectives`
+8. Your screen should look like this
+![Objectives Table](./img/objectivesTable.png)

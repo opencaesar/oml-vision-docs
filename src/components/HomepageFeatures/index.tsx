@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Experienced Open Source Sponsor',
+    title: 'Sponsored by openCAESAR',
     Svg: require('@site/static/img/undraw_teaching.svg').default,
     description: (
       <>

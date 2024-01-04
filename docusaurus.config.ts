@@ -41,6 +41,9 @@ const config: Config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
+          path: 'changelog',
+          routeBasePath: 'changelog',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -66,9 +69,10 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/changelog', label: 'Changelog', position: 'left'},
+        {href: 'https://www.opencaesar.io/', label: 'openCAESAR', position: 'right'},
         {
           href: 'https://github.com/opencaesar/oml-vision-docs',
           label: 'GitHub',
@@ -83,7 +87,11 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Get Started',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Reference Documentation',
               to: '/docs/intro',
             },
           ],
@@ -109,8 +117,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'openCAESAR',
+              href: 'https://www.opencaesar.io/',
             },
             {
               label: 'GitHub',
