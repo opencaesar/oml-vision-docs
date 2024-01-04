@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'OML Vision Docs',
-  tagline: 'A VS Code extension providing UI viewpoints for OML models',
+  tagline: 'A Visual Studio Code extension providing user interface viewpoints for Ontological Modeling Language (OML) models',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -61,7 +61,7 @@ const config: Config = {
         src: 'img/vision480x96.png',
       },
       items: [
-        {to: 'https://opencaesar.github.io/oml-vision-docs/', label: 'Home', position: 'left'},
+        {href: '/', label: 'Home', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',

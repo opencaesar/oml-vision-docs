@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_teaching.svg').default,
     description: (
       <>
-        OML Vision follows under the openCAESAR product line.  openCAESAR is a ontological modeling and 
+        OML Vision falls under the openCAESAR product line.  openCAESAR is a ontological modeling and 
         analysis platform that implements the Ontological Modeling Language (OML), and supports 
         an agile DevOps approach to system modeling and analysis.
       </>
