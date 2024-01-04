@@ -91,8 +91,8 @@ const config: Config = {
               to: '/docs/intro',
             },
             {
-              label: 'Reference Documentation',
-              to: '/docs/intro',
+              label: 'API Documentation',
+              to: '/docs/category/api-documentation',
             },
           ],
         },
