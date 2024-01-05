@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Create a `src/vision/config` directory
 
-It contains the configuration for the mutation and query API endpoint for the in-memory [Fuseki](https://jena.apache.org/documentation/fuseki2/) RDF triplestore.
+It contains the configuration for the update and query API endpoint for the in-memory [Fuseki](https://jena.apache.org/documentation/fuseki2/) RDF triplestore.
 
 Detailed information about the config directory can be found [here](/docs/api-documentation/config)
 
@@ -24,7 +24,7 @@ Detailed information about the layouts directory can be found [here](/docs/api-d
 
 Create a `src/vision/sparql` directory
 
-It contains the definitions for the mutations and queries that will be sent to the in-memory RDF triplestore.
+It contains the definitions for the updates and queries that will be sent to the in-memory RDF triplestore.
 
 Detailed information about the config directory can be found [here](/docs/api-documentation/sparql)
 
