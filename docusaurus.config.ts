@@ -38,7 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/opencaesar/oml-vision-docs/tree/master/',
         },
         blog: {
           // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
@@ -48,7 +48,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/opencaesar/oml-vision-docs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
