@@ -4,54 +4,29 @@ sidebar_position: 2
 
 # Config
 
-Documents are **groups of pages** connected through:
+The config or configuration directory contains the configuration the following API endpoints for the in-memory [Fuseki](https://jena.apache.org/documentation/fuseki2/) RDF triplestore:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- query
+- mutation
 
-## Create your first Doc
+<!-- TODO: Change example to opencaesar organization -->
+An example of a config directory correctly formatted for OML Vision can be seen [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/config/sparqlConfig.json)
 
-Create a Markdown file at `docs/hello.md`:
+## sparqlConfig.json
 
-```md title="docs/hello.md"
-# Hello
+:::info sparqlConfig.json
 
-This is my **first Docusaurus document**!
-```
+Create a `src/vision/config/sparqlConfig.json` file (case-sensitive)
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+:::
 
-## Configure the Sidebar
+The `src/vision/config/sparqlConfig.json` file is responsible for specifying the query and mutation API endpoints.
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+It is formatted as a JSON object with 2 strings as follows:
 
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
+```json
+{
+  "queryEndpoint": string,
+  "mutationEndpoint": string
+}
 ```
