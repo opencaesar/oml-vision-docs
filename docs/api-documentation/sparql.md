@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Deploy your site
+# Sparql
 
 Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
 

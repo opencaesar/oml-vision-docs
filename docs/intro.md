@@ -87,11 +87,22 @@ OML Vision works with viewpoints which will be covered in Create Viewpoints foun
 <!-- TODO: Change URL to opencaesar organization once documentation is updated -->
 If you want to see the capabilities of OML Vision without creating your own OML model you may use [this OML model](https://github.com/pogi7/kepler16b-example/tree/main) of a hypothetical spacecraft that will explore the [Kepler16b exoplanet](https://en.wikipedia.org/wiki/Kepler-16b).
 
-1. Clone the repository
+1. Click the eye icon in the sidebar which will activate the OML Vision extension
+2. Your screen should look like this
+![Unopened Workspace](./img/unopenedWorkspace.png)
+
+3. Click `Clone OML Model` and enter in this URL https://github.com/pogi7/kepler16b-example.git
+
+
+:::tip Command Line Interface
+
+You can also run this command from the command line using 
 ```bash
 git clone https://github.com/pogi7/kepler16b-example.git
 ```
-2. Open the kepler16b-example OML model in VSCode
+:::
+
+4. Open the kepler16b-example OML model in VSCode
 
 ### Start OML Vision
 
@@ -101,7 +112,7 @@ git clone https://github.com/pogi7/kepler16b-example.git
 3. Your screen should look like this
 ![Activate Extension](./img/activateExtension.png)
 
-4. Data must be loaded into the in-memory database for OML Vision to render views
+4. Data must be loaded into the in-memory RDF triplestore for OML Vision to render views
 5. Click `Run clean` (This will clear the cache i.e.delete the build folder)
 
 :::tip Command Line Interface
@@ -113,7 +124,7 @@ You can also run this command from the command line using
 Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle) file for a list of commands
 :::
 
-6. Click `Run owlLoad` (This will load data into the in-memory database)
+6. Click `Run owlLoad` (This will load data into the in-memory RDF triplestore)
 
 :::tip Command Line Interface
 
