@@ -12,7 +12,7 @@ Let's discover **OML Vision in less than 5 minutes**.
 
 :::tip VSCode Terminology
 
-While not required, it is recommended to read the documentation on VSCode terminology as this documentation will be referencing it heavily.  Read more [here](https://code.visualstudio.com/docs/getstarted/userinterface)
+While not required, it is recommended to read the documentation on VSCode terminology as it will be referenced heavily.  Read more [here](https://code.visualstudio.com/docs/getstarted/userinterface)
 
 :::
 
@@ -79,7 +79,7 @@ OML Vision is designed to work with OML (Ontological Modeling Language) models.
 Tutorials on how to create an OML model from scratch can be found [here](https://www.opencaesar.io/oml-tutorials/)
 
 :::danger No OML Vision viewpoints defined in above tutorial
-OML Vision works with viewpoints which will be covered in Create Viewpoints found [here](/docs/tutorial-basics/create-viewpoints)
+OML Vision works with viewpoints which will be covered in `Layouts` found [here](/docs/category/layouts)
 :::
 
 ### Use existing OML model
