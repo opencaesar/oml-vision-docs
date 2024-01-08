@@ -173,7 +173,7 @@ queries: {}
 
 This object contains the queries that will query the RDF Triplestore for the content that will populate in the Table. 
 
-**Look at the sparql docs for more info found [here](/docs/api-documentation/config)**
+**Look at the sparql docs for more info found [here](/docs/api-documentation/sparql)**
 
 :::tip FUSEKI
 
