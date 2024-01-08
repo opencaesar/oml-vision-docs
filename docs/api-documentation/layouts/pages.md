@@ -217,15 +217,15 @@ children: {
     title: string;
     path: string;
     treeIcon: string;
-    isTree?: boolean;
-    isDiagram?: boolean;
+    isTree: boolean;
+    isDiagram: boolean;
   }[];
 ```
 
 :::
 
 
-This `children` array defines the `title`, `path`, and `treeIcon` of the `Child Page`. 
+This `children` array of objects defines the `title`, `path`, and `treeIcon` of the `Child Page`. 
 
 **You can more than one `Child Page` in the `children` array.**
 
