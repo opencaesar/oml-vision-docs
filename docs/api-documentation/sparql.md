@@ -4,28 +4,32 @@ sidebar_position: 4
 
 # Sparql
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+SPARQL is the main query language that is used to query the RDF triplestore.  An example of a correctly formatted `sparql` directory for OML Vision is found here:
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
+- [Kepler16b sparql directory](https://github.com/pogi7/kepler16b-example/tree/main/src/vision/sparql)
+- [Open Source Rover sparql directory](https://github.com/UTNAK/open-source-rover/tree/main/src/vision/sparql)
 
-## Build your site
+You can read more about SPARQL [here](https://www.ontotext.com/knowledgehub/fundamentals/what-is-sparql/)
 
-Build your site **for production**:
+## Formatting Query
 
-```bash
-npm run build
-```
+There are several ways to correctly format a SPARQL query.  
 
-The static files are generated in the `build` folder.
+Once the SPARQL query is correctly formatted create a file for the query and place it in the `src/vision/sparql` directory.
 
-## Deploy your site
+### Fuseki Web User Interface
 
-Test your production build locally:
+Fuseki's RDF triplestore has a convenient way to format queries using their web user interface.
 
-```bash
-npm run serve
-```
+:::tip FUSEKI
 
-The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).
+You can test queries by going to localhost:3030 which is created once data is loaded into the Fuseki DB.  You can watch more info about testing queries with Fuseki by going [here](https://www.youtube.com/watch?v=w_pJ3XiBWeM&t=621s)
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+The AI & DS Channel (2021, February 18). SPARQL Query [Video]. YouTube. https://www.youtube.com/watch?v=w_pJ3XiBWeM&t=621s
+
+:::
+
+### SPARQL Notebooks
+
+If you feel comfortable working with notebooks you can use SPARQL Notebooks to format queries.  You can read more about SPARQL notebooks [here](https://marketplace.visualstudio.com/items?itemName=Zazuko.sparql-notebook)
+
