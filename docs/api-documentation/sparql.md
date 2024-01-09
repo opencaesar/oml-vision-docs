@@ -4,7 +4,9 @@ sidebar_position: 4
 
 # Sparql
 
-SPARQL is the main query language that is used to query the RDF triplestore.  An example of a correctly formatted `sparql` directory for OML Vision is found here:
+SPARQL is the main query language that is used to query the RDF triplestore.  
+
+Examples of correctly formatted `sparql` directory for OML Vision are found here:
 
 - [Kepler16b sparql directory](https://github.com/pogi7/kepler16b-example/tree/main/src/vision/sparql)
 - [Open Source Rover sparql directory](https://github.com/UTNAK/open-source-rover/tree/main/src/vision/sparql)
