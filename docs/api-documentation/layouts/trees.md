@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Trees
 
+Trees are created using [React Arborist](https://github.com/brimdata/react-arborist).
+
 :::info trees.json
 
 Create a `src/vision/layouts/trees.json` file (case-sensitive)
@@ -242,6 +244,6 @@ subRowMappings: {
 
 :::
 
-This `subRowMappings` array of obejcts defines the `id`, `name`, and `labelFormat` of the Tree.
+This `subRowMappings` array of objects defines the `id`, `name`, and `labelFormat` for the subrows of the Tree.
 
 **The `id`, `name`, and `labelFormat` have the same data structure as `rowMapping`**

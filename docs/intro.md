@@ -84,14 +84,17 @@ OML Vision works with viewpoints which will be covered in `Layouts` found [here]
 
 ### Use existing OML model
 
+If you want to see the capabilities of OML Vision without creating your own OML model you may use one of the following OML models:
+
 <!-- TODO: Change URL to opencaesar organization once documentation is updated -->
-If you want to see the capabilities of OML Vision without creating your own OML model you may use [this OML model](https://github.com/pogi7/kepler16b-example/tree/main) of a hypothetical spacecraft that will explore the [Kepler16b exoplanet](https://en.wikipedia.org/wiki/Kepler-16b).
+- [Kepler16b](https://github.com/pogi7/kepler16b-example/tree/main): A hypothetical spacecraft that will explore the [Kepler16b exoplanet](https://en.wikipedia.org/wiki/Kepler-16b)
+- [Open Source Rover](https://github.com/UTNAK/open-source-rover/tree/main): A descriptive model of the [JPL Open Source Rover](https://github.com/nasa-jpl/open-source-rover/tree/master)
 
 1. Click the eye icon in the sidebar which will activate the OML Vision extension
 2. Your screen should look like this
 ![Unopened Workspace](./img/unopenedWorkspace.png)
 
-3. Click `Clone OML Model` and enter in this URL https://github.com/pogi7/kepler16b-example.git
+1. Click `Clone OML Model` and enter in this URL https://github.com/pogi7/kepler16b-example.git
 
 
 :::tip Command Line Interface

@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Tables
 
+Tables are created using [tanstack table](https://tanstack.com/table/v8).
+
 :::info tables.json
 
 Create a `src/vision/layouts/tables.json` file (case-sensitive)
@@ -266,6 +268,6 @@ subRowMappings: {
 
 :::
 
-This `subRowMappings` array of obejcts defines the `id`, `name`, and `labelFormat` of the Table.
+This `subRowMappings` array of objects defines the `id`, `name`, and `labelFormat` for the subrows of the Table.
 
 **The `id`, `name`, and `labelFormat` have the same data structure as `rowMapping`**

@@ -4,95 +4,93 @@ sidebar_position: 4
 
 # Diagrams
 
-The layouts directory contains the specifications for OML Vision to render 
+Diagrams are created using [React Flow](https://reactflow.dev/).
 
-- pages defined in the model that are rendered in the sidebar
-- content within tables, trees, and diagrams that are rendered in the webview
+:::info diagrams.json
 
-<!-- TODO: Change example to opencaesar organization -->
-An example of a layouts directory correctly formatted for OML Vision can be seen [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts)
-
-## `pages.json`
-
-:::info pages.json
-
-Create a `src/vision/layouts/pages.json` file (case-sensitive)
+Create a `src/vision/layouts/diagrams.json` file (case-sensitive)
 
 :::
 
-The `src/vision/layouts/pages.json` file is responsible defines possible views that OML Vision can display to user can specify if a view is a table, tree, or diagram
+The `src/vision/layouts/diagrams.json` file is responsible for: 
+
+- Defining what OML Vision Diagrams can render
+  - Name of the Diagrams
+  - Name of the nodes for the Diagram
+  - Name of the edges for the Diagram
+  - Queries for the Diagram node content
+  - Queries for the Diagram edge content
+  - How to map Diagrams node queries to edge queries
 
 It is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/pages.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json)
 
 ```json
-[
-  { "title": "Home", "path": "/", "treeIcon": "home" },
-  {
-    "title": "Kepler16b",
-    "treeIcon": "server",
-    "iconUrl": "https://nasa-jpl.github.io/stellar/icons/satellite.svg",
-    "children": [
-      { 
-        "title": "Objectives",
-        "treeIcon": "window",
-        "path": "objectives" 
-      },
+{
+  "decompositions": {
+    "name": "Decomposition",
+    "queries": {
+      "decompositions": "component.sparql",
+      "edge": "component.sparql"
+    },
+    "rowMapping": {
+      "id": "decompositions",
+      "name": "System",
+      "labelFormat": "{c1_localname}",
+      "colorKey": "c1_localname",
+      "edgeMatchKey": "c1_localname"
+    },
+    "edges": [
       {
-        "title": "Missions",
-        "treeIcon": "graph-scatter",
-        "path": "missions",
-        "isDiagram": true
-      },
+        "id": "edge",
+        "name": "Edge",
+        "labelFormat": "hasSubsystem",
+        "colorKey": "c2_localname",
+        "sourceKey": "c1_localname",
+        "targetKey": "c2_localname"
+      }
+    ]
+  },
+  "movingscenario": {
+    "name": "Scenario",
+    "queries": {
+      "movingscenario": "scenario_move.sparql",
+      "edge": "scenario_move.sparql"
+    },
+    "rowMapping": {
+      "id": "movingscenario",
+      "name": "Task",
+      "labelFormat": "{f2_id} \n {f2_cname}",
+      "colorKey": "f2_id",
+      "edgeMatchKey": "f2_id"
+    },
+    "edges": [
       {
-        "title": "Components",
-        "treeIcon": "list-tree",
-        "path": "components",
-        "isTree": true
-      },
-      {
-        "title": "Connections",
-        "treeIcon": "window",
-        "path": "connections"
-      },
-      {
-        "title": "Requirements",
-        "treeIcon": "list-tree",
-        "path": "requirements",
-        "isTree": true
+        "id": "edge",
+        "name": "Edge",
+        "labelFormat": "invokes",
+        "colorKey": "f2_id",
+        "sourceKey": "f2_id",
+        "targetKey": "f3_id"
       }
     ]
   }
-]
+}
 ```
 
-## Home Page
+## Defining Diagram
 
-The home page acts as an entry point for users to navigate through the pages that OML Vision renders.
+A Diagram must be properly defined in order to be rendered by OML Vision
 
-![Home Page](./img/homePage.png)
+### Terminology
+OML Vision defines a node and edge as follows:
 
-### title
-:::danger REQUIRED
+- Node: A graphical element that contains information
+- Edge: A graphical element that connects information
 
-```typescript
-title: string
-```
-
-:::
-
-
-This string defines the title of the home page.  A good name for the home page is "Home" or "Frontpage"
-
-:::tip USER INTERFACE
-
-The name of the `title` is rendered in the sidebar for the OML Vision extension shown in the red boxes.
-
-![Title Home Page](./img/titleHomePage.png)
-
-:::
+![Diagram Terminology](./img/diagramTerminology.png)
 
 ### path
 :::danger REQUIRED
@@ -103,218 +101,203 @@ path: string
 
 :::
 
-
-This string defines the path of the page. 
-
-**For the `Home Page` the path must be `/`**
+This string defines the path of the Diagram.
 
 :::tip USER INTERFACE
 
-The name of the `path` is rendered in the sidebar when you hover and hold for 2 seconds over the `Home Page` in the OML Vision extension shown in the red boxes.
+The name of the `path` is the same path that was defined in the `pages.json`.
 
-![Path Home Page](./img/pathHomePage.png)
+![Diagram Path](./img/diagramPath.png)
 
 :::
 
-### treeIcon
+### name
 :::note OPTIONAL
 
 ```typescript
-treeIcon: string
+name: string
 ```
 
 :::
 
 
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
+This string gives a name to the Diagram in the `diagramLayouts.json` file.  
 
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Home Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension shown in the red boxes.
-
-![Path Home Page](./img/treeIconHomePage.png)
-
-:::
-
-## Child Pages
-
-Child pages are pages that are grouped with other similar pages.  The paths to these pages are rendered in the sidebar and in the `Home Page` shown in the red boxes.
-
-**OML Vision supports more than 1 child page.**
-
-![Child Page](./img/childPage.png)
-
-### title
+### queries
 :::danger REQUIRED
 
 ```typescript
-title: string
+queries: {}
 ```
 
 :::
 
+This object contains the queries that will query the RDF Triplestore for the content that will populate in the Diagram. 
 
-This string defines the title of the child page.
+**Look at the sparql docs for more info found [here](/docs/api-documentation/sparql)**
 
-:::tip USER INTERFACE
+:::tip FUSEKI
 
-The name of the `title` is rendered in the sidebar and in the `Home Page`.
+You can test queries by going to localhost:3030 which is created once data is loaded into the Fuseki DB.  You can watch more info about testing queries with Fuseki by going [here](https://www.youtube.com/watch?v=w_pJ3XiBWeM&t=621s)
+
+The AI & DS Channel (2021, February 18). SPARQL Query [Video]. YouTube. https://www.youtube.com/watch?v=w_pJ3XiBWeM&t=621s
 
 :::
 
-### treeIcon
+### rowMapping
+:::danger REQUIRED
+
+```typescript
+rowMapping: {}
+```
+
+:::
+
+This object defines how the `queries` map to the `columnNames`
+
+#### id
+:::danger REQUIRED
+
+```typescript
+id: string
+```
+
+:::
+
+This string the `id` for the `rowMapping`.
+
+:::tip USER INTERFACE
+
+The `id` correspond to one of the `columnNames`.
+
+![Diagram Row Mapping Id](./img/diagramRowMappingId.png)
+
+:::
+
+#### name
 :::note OPTIONAL
 
 ```typescript
-treeIcon: string
+name: string
 ```
 
 :::
 
+This string gives a name to the `rowMapping`.  
 
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
-
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Child Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension.
-
-:::
-
-### iconUrl
+#### labelFormat
 :::danger REQUIRED
 
 ```typescript
-iconUrl: string
+labelFormat: string
 ```
 
 :::
 
-
-This string defines the path of the icon that is rendered in the home page. 
-
-**Supported image file formats are .svg, .png, or .jpg**
+This string contains the label of the row for the `rowMapping`.
 
 :::tip USER INTERFACE
 
-The `Child Page` icon of the `iconUrl` is rendered in the `Home Page` in the OML Vision extension shown in the red boxes.
+The `labelFormat` is rendered in the rows of the Diagram shown in the red boxes.
 
-![Icon URL Child Page](./img/iconUrlChildPage.png)
+**STRING INTERPOLATION**
+
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
+
+An example is found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json#L11)
+
+![Diagram Column Names](./img/diagramRowMappingLabelFormat.png)
 
 :::
 
-### children
+#### colorKey
 :::danger REQUIRED
 
 ```typescript
-children: {
-    title: string;
-    path: string;
-    treeIcon: string;
-    isTree?: boolean;
-    isDiagram?: boolean;
-  }[];
+colorKey: string
 ```
 
 :::
 
+This string is the seed for a random color generator for the nodes rendered in the Diagram.  Needed to generate legend.
 
-This `children` array defines the `title`, `path`, and `treeIcon` of the `Child Page`. 
+**STRING INTERPOLATION**
 
-**You can more than one `Child Page` in the `children` array.**
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"` 
 
-**By default all child pages are rendered as tables unless specified with the isTree or isDiagram booleans.**
-
-:::tip USER INTERFACE
-
-The `Child Pages` are rendered in the sidebar and in the `Home Page` of the OML Vision extension shown in the red boxes.
-
-![Children Pages](./img/childrenPages.png)
-
-:::
-
-#### title
+#### edgeMatchKey
 :::danger REQUIRED
 
 ```typescript
-title: string
+edgeMatchKey: string
 ```
 
 :::
 
+This string defines the edge for each node in the Diagram.
 
-This string defines the title of the child page.
+**STRING INTERPOLATION**
 
-:::tip USER INTERFACE
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"` 
 
-The name of the `title` of the `Child Page` is rendered in the sidebar and in the `Home Page` of the OML Vision extension.
-
-:::
-
-#### path
-:::danger REQUIRED
-
-```typescript
-path: string
-```
-
-:::
-
-
-This string defines the path of the `Child Page`. 
-
-**Remember this string as it will be needed for the layouts of the tables, trees, and diagrams**
-
-:::tip USER INTERFACE
-
-The name of the `path` is rendered in the sidebar when you hover and hold for 2 seconds over the `Child Page` in the OML Vision extension.
-
-:::
-
-#### treeIcon
+#### subRowMappings
 :::note OPTIONAL
 
 ```typescript
-treeIcon: string
+subRowMappings: {
+    id: string
+    name: string
+    labelFormat: string
+    colorKey: string
+    edgeMatchKey: string
+  }[]
 ```
 
 :::
 
+This `subRowMappings` array of objects defines the `id`, `name`, `labelFormat`, `colorKey`, and `edgeMatchKey` for the subrows of the Diagram.
 
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
+**The `id`, `name`, `labelFormat`, `colorKey`, and `edgeMatchKey` have the same data structure as `rowMapping`**
 
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Child Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension.
-
-:::
-
-#### isTree
-:::note OPTIONAL
+### edges
+:::danger REQUIRED
 
 ```typescript
-isTree: boolean
+edges: {
+    id: string
+    name: string
+    labelFormat: string
+    colorKey: string
+    sourceKey: string
+    targetKey: string
+  }[]
 ```
 
 :::
 
+This `edges` array of objects defines the `id`, `name`, `labelFormat`, and `colorKey` for the edges of the Diagram.
 
-This bool specifies whether or not the `Child Page` will be a tree.  Set `isTree` to `true` to turn the `Child Page` into a tree.
+**The `id`, `name`, `labelFormat`, and `colorKey` have the same data structure as `rowMapping`**
 
-
-#### isDiagram
-:::note OPTIONAL
+#### sourceKey
+:::danger REQUIRED
 
 ```typescript
-isDiagram: boolean
+sourceKey: string
 ```
 
 :::
 
+This string defines the source node for the edge in the Diagram.
 
-This bool specifies whether or not the `Child Page` will be a diagram.  Set `isDiagram` to `true` to turn the `Child Page` into a diagram.
+
+#### targetKey
+:::danger REQUIRED
+
+```typescript
+targetKey: string
+```
+
+:::
+
+This string defines the target node for the edge in the Diagram.
