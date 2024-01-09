@@ -74,6 +74,10 @@ const config: Config = {
           label: 'Docs',
         },
         {to: '/changelog', label: 'Changelog', position: 'left'},
+        {
+          type: 'docsVersionDropdown',
+          position: 'right'
+        },
         {href: 'https://www.opencaesar.io/', label: 'openCAESAR', position: 'right'},
         {
           href: 'https://github.com/opencaesar/oml-vision-docs',
