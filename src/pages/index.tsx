@@ -33,6 +33,14 @@ function HomepageHeader() {
               API Documentation ⚙️
             </Link>
           </div>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/changelog"
+            >
+              Change Log 🚀
+            </Link>
+          </div>
         </div>
       </div>
     </header>
