@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_classic_typescript=self.webpackChunkdocusaurus_classic_typescript||[]).push([[590],{4642:s=>{s.exports=JSON.parse('{"label":"vscode","permalink":"/oml-vision-docs/changelog/tags/vscode","allTagsPath":"/oml-vision-docs/changelog/tags","count":1,"unlisted":false}')}}]);

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>OML Vision Docs Blog</title>
+        <link>https://opencaesar.github.io/oml-vision-docs/changelog</link>
+        <description>OML Vision Docs Blog</description>
+        <lastBuildDate>Tue, 09 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[v0.1.0 Initial Release]]></title>
+            <link>https://opencaesar.github.io/oml-vision-docs/changelog/initial-release</link>
+            <guid>https://opencaesar.github.io/oml-vision-docs/changelog/initial-release</guid>
+            <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[v0.1.0 Initial Release]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v010-initial-release">v0.1.0 Initial Release<a href="https://opencaesar.github.io/oml-vision-docs/changelog/initial-release#v010-initial-release" class="hash-link" aria-label="Direct link to v0.1.0 Initial Release" title="Direct link to v0.1.0 Initial Release">​</a></h2>
+<p><img loading="lazy" alt="OML Vision Logo" src="https://opencaesar.github.io/oml-vision-docs/assets/images/vision480x96-dc2fc7ac2c5286f0d35547b97cb7da40.png" width="960" height="192" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a href="https://opencaesar.github.io/oml-vision-docs/changelog/initial-release#added" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Initial release</li>
+</ul>]]></content:encoded>
+            <category>oml</category>
+            <category>vscode</category>
+        </item>
+    </channel>
+</rss>
