@@ -62,7 +62,7 @@ New tasks will register once you deactivate then reactive OML Vision.  You can d
 
 The `vision` gradle corresponds to the `Setup Tasks` section in OML Vision shown in the red boxes.
 
-![Table Row Mapping Id](./img/gradleTasks.png)
+![Gradle Tasks](./img/gradleTasks.png)
 
 :::
 
