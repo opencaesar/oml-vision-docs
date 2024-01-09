@@ -3,23 +3,25 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'OML Vision Docs',
+  tagline: 'A Visual Studio Code extension providing user interface viewpoints for Ontological Modeling Language (OML) models',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://opencaesar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/oml-vision-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'opencaesar', // Usually your GitHub org/user name.
+  projectName: 'oml-vision-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -38,14 +40,17 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/opencaesar/oml-vision-docs/tree/master/',
         },
         blog: {
+          // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
+          path: 'changelog',
+          routeBasePath: 'changelog',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/opencaesar/oml-vision-docs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -55,24 +60,27 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'OML Vision Logo',
+        src: 'img/vision480x96.png',
       },
       items: [
+        {href: '/', label: 'Home', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/changelog', label: 'Changelog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: 'docsVersionDropdown',
+          position: 'right'
+        },
+        {href: 'https://www.opencaesar.io/', label: 'openCAESAR', position: 'right'},
+        {
+          href: 'https://github.com/opencaesar/oml-vision-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -85,25 +93,33 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Get Started',
               to: '/docs/intro',
             },
+            {
+              label: 'API Documentation',
+              to: '/docs/category/api-documentation',
+            },
+            {
+              label: 'Change Log',
+              to: '/changelog',
+            }
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/hashtag/openCAESAR?src=hashtag_click',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/search/results/all/?keywords=%23opencaesar',
+            },
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/@melaasar/featured',
             },
           ],
         },
@@ -111,17 +127,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'openCAESAR',
+              href: 'https://www.opencaesar.io/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/opencaesar/oml-vision-docs',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} California Institute of Technology. Government sponsorship acknowledged. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

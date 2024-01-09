@@ -10,32 +10,34 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Easy to Use and Learn',
+    Svg: require('@site/static/img/undraw_maker_launch.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        OML Vision was designed with ease of use in mind for all members of the project team and for users 
+        who are familiar with document based tools to transition
+        to Model Based Systems Engineering (MBSE).
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Sponsored by openCAESAR',
+    Svg: require('@site/static/img/undraw_teaching.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        OML Vision falls under the openCAESAR product line.  openCAESAR is a ontological modeling and 
+        analysis platform that implements the Ontological Modeling Language (OML), and supports 
+        an agile DevOps approach to system modeling and analysis.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered by React TSX and VSCode',
+    Svg: require('@site/static/img/undraw_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        OML Vision is a Visual Studio Code extension that is built using React and Typescript. This allows type safety,
+        improved collaboration, and enhanced code maintainability throughout the lifecycle of the project.
       </>
     ),
   },
