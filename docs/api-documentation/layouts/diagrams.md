@@ -268,7 +268,7 @@ nodeTextColor: string
 
 :::
 
-This string sets the color of the text within the nodes rendered in the Diagram.  Users can pick from a wide array of colors.  The full list is [here](https://github.com/opencaesar/oml-vision/blob/master/view/src/components/shared/colors.ts)
+This string sets the type of node in the diagram view.
 
 OML Vision colors nodes which are of type "Assembly" and "Subsystem" differently than other nodes.  
 
