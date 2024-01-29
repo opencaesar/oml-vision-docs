@@ -202,7 +202,7 @@ The `labelFormat` is rendered in the rows of the Diagram shown in the red boxes.
 
 **STRING INTERPOLATION**
 
-OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)  
 
 An example is found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json#L11)
 
@@ -211,7 +211,7 @@ An example is found [here](https://github.com/UTNAK/open-source-rover/blob/main/
 :::
 
 #### colorKey
-:::danger REQUIRED
+:::warning DEPRECATED
 
 ```typescript
 colorKey: string
@@ -219,11 +219,68 @@ colorKey: string
 
 :::
 
-This string is the seed for a random color generator for the nodes rendered in the Diagram.  Needed to generate legend.
+This string is the seed for a random color generator for the nodes rendered in the Diagram.  Needed to generate the legend.
 
 **STRING INTERPOLATION**
 
-OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"` 
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
+
+#### nodeColor
+:::danger REQUIRED
+
+```typescript
+nodeColor: string
+```
+
+:::
+
+This string sets the color of the nodes rendered in the Diagram.  Users can pick from a wide array of colors.  The full list is [here](https://github.com/opencaesar/oml-vision/blob/master/view/src/components/shared/colors.ts)
+
+**Non Case Sensitive Spelling**
+
+OML vision is smart enough to understand inputting the name of the color or the hex value.  These inputs are not case sensitive. 
+
+Inputting `green`, `GREEN`, `Green`, or `#00ff00` will all output the color green to the nodes in the diagram view.
+
+#### nodeTextColor
+:::danger REQUIRED
+
+```typescript
+nodeTextColor: string
+```
+
+:::
+
+This string sets the color of the text within the nodes rendered in the Diagram.  Users can pick from a wide array of colors.  The full list is [here](https://github.com/opencaesar/oml-vision/blob/master/view/src/components/shared/colors.ts)
+
+**Non Case Sensitive Spelling**
+
+OML vision is smart enough to understand inputting the name of the color or the hex value.  These inputs are not case sensitive. 
+
+Inputting `green`, `GREEN`, `Green`, or `#00ff00` will all output the color green to the text of the nodes in the diagram view.
+
+#### nodeType
+:::danger REQUIRED
+
+```typescript
+nodeTextColor: string
+```
+
+:::
+
+This string sets the color of the text within the nodes rendered in the Diagram.  Users can pick from a wide array of colors.  The full list is [here](https://github.com/opencaesar/oml-vision/blob/master/view/src/components/shared/colors.ts)
+
+OML Vision colors nodes which are of type "Assembly" and "Subsystem" differently than other nodes.  
+
+The "Subsystem" node is automatically darkened relative to the `nodeColor`.
+
+The "Assembly" node is automatically lightened relative to the `nodeColor`.
+
+For an example of how these nodes are queried and configured look at the following example located [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/sparql/component_filtered.sparql#L26-L37)
+
+**STRING INTERPOLATION**
+
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
 
 #### edgeMatchKey
 :::danger REQUIRED
@@ -238,7 +295,7 @@ This string defines the edge for each node in the Diagram.
 
 **STRING INTERPOLATION**
 
-OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"` 
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
 
 #### subRowMappings
 :::note OPTIONAL

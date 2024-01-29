@@ -35,3 +35,11 @@ The AI & DS Channel (2021, February 18). SPARQL Query [Video]. YouTube. https://
 
 If you feel comfortable working with notebooks you can use SPARQL Notebooks to format queries.  You can read more about SPARQL notebooks [here](https://marketplace.visualstudio.com/items?itemName=Zazuko.sparql-notebook)
 
+### String Interpolation
+
+OML Vision supports string interpolation with the queries that were formatted for all layouts (Tables, Trees, or Diagrams).  The format is `"{string}"`  
+
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json#L25)
+
+![Table String Interpolation](./layouts/img/tableStringInterpolation.png)
+
