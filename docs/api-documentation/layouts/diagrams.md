@@ -27,59 +27,6 @@ It is formatted as a JSON data structure.
 <!-- TODO: Change to opencaesar repo -->
 An example of what this looks like is seen below with the source code found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json)
 
-```json
-{
-  "decompositions": {
-    "name": "Decomposition",
-    "queries": {
-      "decompositions": "component.sparql",
-      "edge": "component.sparql"
-    },
-    "rowMapping": {
-      "id": "decompositions",
-      "name": "System",
-      "labelFormat": "{c1_localname}",
-      "colorKey": "c1_localname",
-      "edgeMatchKey": "c1_localname"
-    },
-    "edges": [
-      {
-        "id": "edge",
-        "name": "Edge",
-        "labelFormat": "hasSubsystem",
-        "colorKey": "c2_localname",
-        "sourceKey": "c1_localname",
-        "targetKey": "c2_localname"
-      }
-    ]
-  },
-  "movingscenario": {
-    "name": "Scenario",
-    "queries": {
-      "movingscenario": "scenario_move.sparql",
-      "edge": "scenario_move.sparql"
-    },
-    "rowMapping": {
-      "id": "movingscenario",
-      "name": "Task",
-      "labelFormat": "{f2_id} \n {f2_cname}",
-      "colorKey": "f2_id",
-      "edgeMatchKey": "f2_id"
-    },
-    "edges": [
-      {
-        "id": "edge",
-        "name": "Edge",
-        "labelFormat": "invokes",
-        "colorKey": "f2_id",
-        "sourceKey": "f2_id",
-        "targetKey": "f3_id"
-      }
-    ]
-  }
-}
-```
-
 ## Defining Diagram
 
 A Diagram must be properly defined in order to be rendered by OML Vision
@@ -305,16 +252,18 @@ subRowMappings: {
     id: string
     name: string
     labelFormat: string
-    colorKey: string
+    nodeColor: string
+    nodeTextColor: string
+    nodeType: string
     edgeMatchKey: string
   }[]
 ```
 
 :::
 
-This `subRowMappings` array of objects defines the `id`, `name`, `labelFormat`, `colorKey`, and `edgeMatchKey` for the subrows of the Diagram.
+This `subRowMappings` array of objects defines the `id`, `name`, `labelFormat`, `nodeColor`, `nodeTextColor`, `nodeType`, and `edgeMatchKey` for the subrows of the Diagram.
 
-**The `id`, `name`, `labelFormat`, `colorKey`, and `edgeMatchKey` have the same data structure as `rowMapping`**
+**The `id`, `name`, `labelFormat`, `nodeColor`, `nodeTextColor`, `nodeType`, and `edgeMatchKey` have the same data structure as `rowMapping`**
 
 ### edges
 :::danger REQUIRED
@@ -323,8 +272,9 @@ This `subRowMappings` array of objects defines the `id`, `name`, `labelFormat`, 
 edges: {
     id: string
     name: string
+    animated: boolean
     labelFormat: string
-    colorKey: string
+    legendItems: string
     sourceKey: string
     targetKey: string
   }[]
@@ -332,9 +282,35 @@ edges: {
 
 :::
 
-This `edges` array of objects defines the `id`, `name`, `labelFormat`, and `colorKey` for the edges of the Diagram.
+This `edges` array of objects defines the `id`, `name`, `animated`, `labelFormat`, `legendItems`, `sourceKey`, and `targetKey` for the edges of the Diagram.
 
-**The `id`, `name`, `labelFormat`, and `colorKey` have the same data structure as `rowMapping`**
+**The `id`, `name`, and `labelFormat` have the same data structure as `rowMapping`**
+
+#### animated
+:::danger REQUIRED
+
+```typescript
+animated: boolean
+```
+
+:::
+
+This boolean defines whether or not all edges in the Diagram are animated are not.
+
+#### legendItems
+:::danger REQUIRED
+
+```typescript
+legendItems: string
+```
+
+:::
+
+This string defines the items that are populated in the legend in the diagram.  These items are automatically colored by OML Vision.
+
+**STRING INTERPOLATION**
+
+OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
 
 #### sourceKey
 :::danger REQUIRED
