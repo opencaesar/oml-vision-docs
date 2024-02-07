@@ -164,13 +164,13 @@ An example is found [here](https://github.com/UTNAK/open-source-rover/blob/main/
 colorKey: string
 ```
 
-:::
-
 This string is the seed for a random color generator for the nodes rendered in the Diagram.  Needed to generate the legend.
 
 **STRING INTERPOLATION**
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
+
+:::
 
 #### nodeColor
 :::danger REQUIRED
@@ -213,8 +213,6 @@ Inputting `green`, `GREEN`, `Green`, or `#00ff00` will all output the color gree
 nodeTextColor: string
 ```
 
-:::
-
 This string sets the type of node in the diagram view.
 
 OML Vision colors nodes which are of type "Assembly" and "Subsystem" differently than other nodes.  
@@ -229,6 +227,8 @@ For an example of how these nodes are queried and configured look at the followi
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
 
+:::
+
 #### edgeMatchKey
 :::danger REQUIRED
 
@@ -236,13 +236,13 @@ OML Vision supports string interpolation with the queries that were formatted.  
 edgeMatchKey: string
 ```
 
-:::
-
 This string defines the edge for each node in the Diagram.
 
 **STRING INTERPOLATION**
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
+
+:::
 
 #### subRowMappings
 :::note OPTIONAL
@@ -304,13 +304,13 @@ This boolean defines whether or not all edges in the Diagram are animated are no
 legendItems: string
 ```
 
-:::
-
 This string defines the items that are populated in the legend in the diagram.  These items are automatically colored by OML Vision.
 
 **STRING INTERPOLATION**
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)
+
+:::
 
 #### sourceKey
 :::danger REQUIRED
@@ -334,3 +334,31 @@ targetKey: string
 :::
 
 This string defines the target node for the edge in the Diagram.
+
+## Abilities
+
+### Highlight Edges
+
+Hightlight edges connected to nodes by clicking one or multiple nodes.  You can select multiple nodes by holding down the CMD (macOS) or Ctrl (Windows) key.
+
+No Node Highlight with unlighted edges:
+![No Node Highlight](./img/noNodeHighlight.png)
+
+Node Highlight with highlighted edges:
+![Node Highlight](./img/nodeHighlight.png)
+
+### PNG Download 
+
+In the lower left of the diagram, you can click the PNG icon to download the current state of the diagram to a PNG image.
+
+### SVG Download 
+
+In the lower left of the diagram, you can click the SVG icon to download the current state of the diagram to a SVG file.
+
+### Lock/Unlock
+
+In the lower left of the diagram, you can click the lock icon to unlock the nodes and edges in the diagram.  
+
+When the diagram is unlocked you can select one or multiple nodes to move around.
+
+You can lock the nodes and edges in the diagram by clicking the unlock icon.
