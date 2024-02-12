@@ -95,7 +95,15 @@ The AI & DS Channel (2021, February 18). SPARQL Query [Video]. YouTube. https://
 :::danger REQUIRED
 
 ```typescript
-rowMapping: {}
+rowMapping: {
+  id: connections
+  name: string
+  labelFormat: string
+  nodeColor: string
+  nodeTextColor: string
+  nodeType: string
+  edgeMatchKey: string
+}
 ```
 
 :::
@@ -362,3 +370,11 @@ In the lower left of the diagram, you can click the lock icon to unlock the node
 When the diagram is unlocked you can select one or multiple nodes to move around.
 
 You can lock the nodes and edges in the diagram by clicking the unlock icon.
+
+### Change Node Layout Position
+
+In the upper right of the diagram, you can click the Auto Layout dropdown to change the node position.
+
+The position is based off of https://reactflow.dev/api-reference/types/position
+
+![Change Position](./img/changeLayoutPosition.png)
