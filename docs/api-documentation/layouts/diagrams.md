@@ -389,4 +389,4 @@ There are three available algorithms to select from:
 2. [Mr.Tree](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-mrtree.html)
 3. [Force](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-force.html)
 
-![Change Position](./img/changeLayoutAlgorithm.png)
+![Change Algorithm](./img/changeLayoutAlgorithm.png)
