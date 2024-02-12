@@ -378,3 +378,15 @@ In the upper right of the diagram, you can click the Auto Layout dropdown to cha
 The position is based off of https://reactflow.dev/api-reference/types/position
 
 ![Change Position](./img/changeLayoutPosition.png)
+
+### Change Algorithm Layout
+
+In the upper right of the diagram, you can click the Algorithm dropdown to change the algorithm that is used to calculate the layout of the nodes and edges.
+
+There are three available algorithms to select from:
+
+1. [Layered](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-layered.html)
+2. [Mr.Tree](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-mrtree.html)
+3. [Force](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-force.html)
+
+![Change Position](./img/changeLayoutAlgorithm.png)
