@@ -2,11 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://opencaesar.github.io/oml-vision-docs/changelog</id>
     <title>OML Vision Docs Blog</title>
-    <updated>2024-01-09T00:00:00.000Z</updated>
+    <updated>2024-02-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://opencaesar.github.io/oml-vision-docs/changelog"/>
     <subtitle>OML Vision Docs Blog</subtitle>
     <icon>https://opencaesar.github.io/oml-vision-docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[v0.2.0 Mercury]]></title>
+        <id>https://opencaesar.github.io/oml-vision-docs/changelog/mercury</id>
+        <link href="https://opencaesar.github.io/oml-vision-docs/changelog/mercury"/>
+        <updated>2024-02-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[v0.2.0 Mercury]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v020-mercury">v0.2.0 Mercury<a href="https://opencaesar.github.io/oml-vision-docs/changelog/mercury#v020-mercury" class="hash-link" aria-label="Direct link to v0.2.0 Mercury" title="Direct link to v0.2.0 Mercury">​</a></h2>
+<p><img loading="lazy" alt="JHU APL Mercury" src="https://opencaesar.github.io/oml-vision-docs/assets/images/jhuapl_mercury-8b844250ac44dfe9e643e3ff42bdffb2.png" width="1706" height="1705" class="img_ev3q"></p>
+<p>Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed">Fixed<a href="https://opencaesar.github.io/oml-vision-docs/changelog/mercury#fixed" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Tree View: shows VSCode error popup with Tree UI bugs <a href="https://github.com/opencaesar/oml-vision/pull/5" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/5</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a href="https://opencaesar.github.io/oml-vision-docs/changelog/mercury#added" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Diagram View: Add export to SVG for diagrams <a href="https://github.com/opencaesar/oml-vision/pull/3" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/3</a></li>
+<li>Developer Experience: Add VSCode dev container <a href="https://github.com/opencaesar/oml-vision/pull/21" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/21</a></li>
+<li>Diagram View: Add ability to change node and node text color while automatically changing node color based on node type <a href="https://github.com/opencaesar/oml-vision/pull/22" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/22</a></li>
+<li>Diagram View: Add ability to animate edges <a href="https://github.com/opencaesar/oml-vision/pull/23" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/23</a></li>
+<li>Diagram View: Add ability to highlight/unlight connected edges to selected nodes <a href="https://github.com/opencaesar/oml-vision/pull/24" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/24</a></li>
+<li>Diagram View: Add ability to automatically apply a position layout to nodes and edges <a href="https://github.com/opencaesar/oml-vision/pull/24" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/24</a></li>
+<li>Diagram View: Add ability to apply a layout algorithm to nodes and edges <a href="https://github.com/opencaesar/oml-vision/pull/27" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/27</a></li>
+</ul>]]></content>
+        <author>
+            <name>Aaron Levitt</name>
+            <uri>https://www.opencaesar.io/contributors/Aaron%20Levitt.html</uri>
+        </author>
+        <category label="oml" term="oml"/>
+        <category label="vscode" term="vscode"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[v0.1.0 Initial Release]]></title>
         <id>https://opencaesar.github.io/oml-vision-docs/changelog/initial-release</id>
