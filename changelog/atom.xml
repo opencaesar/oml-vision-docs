@@ -27,7 +27,7 @@
 <li>Diagram View: Add ability to change node and node text color while automatically changing node color based on node type <a href="https://github.com/opencaesar/oml-vision/pull/22" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/22</a></li>
 <li>Diagram View: Add ability to animate edges <a href="https://github.com/opencaesar/oml-vision/pull/23" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/23</a></li>
 <li>Diagram View: Add ability to highlight/unlight connected edges to selected nodes <a href="https://github.com/opencaesar/oml-vision/pull/24" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/24</a></li>
-<li>Diagram View: Add ability to automatically apply a position layout to nodes and edges <a href="https://github.com/opencaesar/oml-vision/pull/24" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/24</a></li>
+<li>Diagram View: Add ability to automatically apply a position layout to nodes and edges <a href="https://github.com/opencaesar/oml-vision/pull/25" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/25</a></li>
 <li>Diagram View: Add ability to apply a layout algorithm to nodes and edges <a href="https://github.com/opencaesar/oml-vision/pull/27" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/27</a></li>
 </ul>]]></content>
         <author>
