@@ -21,5 +21,5 @@ Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie 
 - Diagram View: Add ability to change node and node text color while automatically changing node color based on node type https://github.com/opencaesar/oml-vision/pull/22
 - Diagram View: Add ability to animate edges https://github.com/opencaesar/oml-vision/pull/23
 - Diagram View: Add ability to highlight/unlight connected edges to selected nodes https://github.com/opencaesar/oml-vision/pull/24
-- Diagram View: Add ability to automatically apply a position layout to nodes and edges https://github.com/opencaesar/oml-vision/pull/24
+- Diagram View: Add ability to automatically apply a position layout to nodes and edges https://github.com/opencaesar/oml-vision/pull/25
 - Diagram View: Add ability to apply a layout algorithm to nodes and edges https://github.com/opencaesar/oml-vision/pull/27
