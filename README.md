@@ -1,4 +1,4 @@
-# OML Vision
+# OML Vision Docs
 
 ## Source Code
 Link to [Source Code](https://github.com/opencaesar/oml-vision/tree/master)
