@@ -390,3 +390,9 @@ There are three available algorithms to select from:
 3. [Force](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-force.html)
 
 ![Change Algorithm](./img/changeLayoutAlgorithm.png)
+
+### Parent-Child Nodes
+
+You can create a parent-child relationship between nodes that can be represented in a block diagram.  This is done using a unique identifer called a [IRI](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier).  The IRI is obtained from a SPARQL query.  This SPARQL query specifies that a parent node contains one or more child blocks. The IRI of the child should be obtained with the ?iri key and the IRI of the parent should be specified with ?parentIri or a key ending with 'Iri'.
+
+An example of how this is done can be found [here](https://github.com/UTNAK/blockdiagram-demo?tab=readme-ov-file#oml-vision-demo-of-block-diagram-views)
