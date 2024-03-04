@@ -30,47 +30,6 @@ It is formatted as a JSON data structure.
 <!-- TODO: Change to opencaesar repo -->
 An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/pages.json)
 
-```json
-[
-  { "title": "Home", "path": "/", "treeIcon": "home" },
-  {
-    "title": "Kepler16b",
-    "treeIcon": "server",
-    "iconUrl": "https://nasa-jpl.github.io/stellar/icons/satellite.svg",
-    "children": [
-      { 
-        "title": "Objectives",
-        "treeIcon": "window",
-        "path": "objectives" 
-      },
-      {
-        "title": "Missions",
-        "treeIcon": "graph-scatter",
-        "path": "missions",
-        "isDiagram": true
-      },
-      {
-        "title": "Components",
-        "treeIcon": "list-tree",
-        "path": "components",
-        "isTree": true
-      },
-      {
-        "title": "Connections",
-        "treeIcon": "window",
-        "path": "connections"
-      },
-      {
-        "title": "Requirements",
-        "treeIcon": "list-tree",
-        "path": "requirements",
-        "isTree": true
-      }
-    ]
-  }
-]
-```
-
 ## Home Page
 
 The home page acts as an entry point for users to navigate through the pages that OML Vision renders.
@@ -119,7 +78,34 @@ The name of the `path` is rendered in the sidebar when you hover and hold for 2 
 
 :::
 
-### treeIcon
+### type
+:::danger REQUIRED
+
+```typescript
+type: string
+```
+
+:::
+
+
+This string defines the type of the webview to be rendered. 
+
+The type of webview determines the icon that is rendered in the sidebar.
+
+**The icons that are rendered come from [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).**
+
+:::tip TYPES
+
+These are the current types
+1. `home` -  This type renders the Home Page.
+2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+
+:::
+
+### treeIcon (DEPRECATED)
 :::note OPTIONAL
 
 ```typescript
@@ -167,7 +153,34 @@ The name of the `title` is rendered in the sidebar and in the `Home Page`.
 
 :::
 
-### treeIcon
+### type
+:::danger REQUIRED
+
+```typescript
+type: string
+```
+
+:::
+
+
+This string defines the type of the webview to be rendered. 
+
+The type of webview determines the icon that is rendered in the sidebar.
+
+**The icons that are rendered come from [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).**
+
+:::tip TYPES
+
+These are the current types
+1. `home` -  This type renders the Home Page.
+2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+
+:::
+
+### treeIcon (DEPRECATED)
 :::note OPTIONAL
 
 ```typescript
@@ -216,16 +229,14 @@ The `Child Page` icon of the `iconUrl` is rendered in the `Home Page` in the OML
 children: {
     title: string;
     path: string;
-    treeIcon: string;
-    isTree: boolean;
-    isDiagram: boolean;
+    type: string;
   }[];
 ```
 
 :::
 
 
-This `children` array of objects defines the `title`, `path`, and `treeIcon` of the `Child Page`. 
+This `children` array of objects defines the `title`, `path`, and `type` of the `Child Page`. 
 
 **You can more than one `Child Page` in the `children` array.**
 
@@ -277,7 +288,34 @@ The name of the `path` is rendered in the sidebar when you hover and hold for 2 
 
 :::
 
-#### treeIcon
+#### type
+:::danger REQUIRED
+
+```typescript
+type: string
+```
+
+:::
+
+
+This string defines the type of the webview to be rendered. 
+
+The type of webview determines the icon that is rendered in the sidebar.
+
+**The icons that are rendered come from [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).**
+
+:::tip TYPES
+
+These are the current types
+1. `home` -  This type renders the Home Page.
+2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+
+:::
+
+#### treeIcon (DEPRECATED)
 :::note OPTIONAL
 
 ```typescript
@@ -297,7 +335,7 @@ The `Child Page` icon of the `treeIcon` is rendered in the sidebar for the OML V
 
 :::
 
-#### isTree
+#### isTree (DEPRECATED)
 :::note OPTIONAL
 
 ```typescript
@@ -310,7 +348,7 @@ isTree: boolean
 This bool specifies whether or not the `Child Page` will be a tree.  Set `isTree` to `true` to turn the `Child Page` into a tree.
 
 
-#### isDiagram
+#### isDiagram (DEPRECATED)
 :::note OPTIONAL
 
 ```typescript

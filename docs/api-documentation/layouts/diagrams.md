@@ -6,13 +6,13 @@ sidebar_position: 4
 
 Diagrams are created using [React Flow](https://reactflow.dev/).
 
-:::info diagrams.json
+:::info diagrams directory
 
-Create a `src/vision/layouts/diagrams.json` file (case-sensitive)
+Create a `src/vision/layouts/diagrams` directory (case-sensitive)
 
 :::
 
-The `src/vision/layouts/diagrams.json` file is responsible for: 
+The `src/vision/layouts/diagrams` directory is responsible for: 
 
 - Defining what OML Vision Diagrams can render
   - Name of the Diagrams
@@ -22,12 +22,12 @@ The `src/vision/layouts/diagrams.json` file is responsible for:
   - Queries for the Diagram edge content
   - How to map Diagrams node queries to edge queries
 
-It is formatted as a JSON data structure.
+Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/diagrams)
 
-## Defining Diagram
+## Defining A Diagram
 
 A Diagram must be properly defined in order to be rendered by OML Vision
 
@@ -68,7 +68,7 @@ name: string
 :::
 
 
-This string gives a name to the Diagram in the `diagramLayouts.json` file.  
+This string gives a name to the Diagram.  
 
 ### queries
 :::danger REQUIRED
@@ -159,7 +159,7 @@ The `labelFormat` is rendered in the rows of the Diagram shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)  
 
-An example is found [here](https://github.com/UTNAK/open-source-rover/blob/main/src/vision/layouts/diagramLayouts.json#L11)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/diagrams/components.json#L11)
 
 ![Diagram Column Names](./img/diagramRowMappingLabelFormat.png)
 
