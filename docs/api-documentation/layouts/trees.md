@@ -6,13 +6,13 @@ sidebar_position: 3
 
 Trees are created using [React Arborist](https://github.com/brimdata/react-arborist).
 
-:::info trees.json
+:::info trees directory
 
-Create a `src/vision/layouts/trees.json` file (case-sensitive)
+Create a `src/vision/layouts/trees` directory (case-sensitive)
 
 :::
 
-The `src/vision/layouts/trees.json` file is responsible for: 
+The `src/vision/layouts/trees` directory is responsible for: 
 
 - Defining what OML Vision Trees can render
   - Name of the Trees
@@ -21,59 +21,12 @@ The `src/vision/layouts/trees.json` file is responsible for:
   - Queries that the Trees's content needs
   - How to map Tree queries to columns
 
-It is formatted as a JSON data structure.
+Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/treeLayouts.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/trees)
 
-```json
-{
-  "requirements": {
-    "name": "Requirements Diagram",
-    "diagrams": {
-      "all-rows": "requirements-diagram"
-    },
-    "queries": {
-      "requirements": "requirements.sparql"
-    },
-    "rowMapping": {
-      "id": "requirements",
-      "name": "Requirements",
-      "labelFormat": "{r_id}",
-      "subRowMappings": [
-        {
-          "id": "requirements",
-          "name": "Components",
-          "labelFormat": "C Name: {c_name}"
-        }
-      ]
-    }
-  },
-  "components": {
-    "name": "Components",
-    "diagrams": {
-      "all-rows": "components-diagram"
-    },
-    "queries": {
-      "components": "components.sparql"
-    },
-    "rowMapping": {
-      "id": "components",
-      "name": "Components",
-      "labelFormat": "{c1_id} {c1_name}",
-      "subRowMappings": [
-        {
-          "id": "components",
-          "name": "Masses",
-          "labelFormat": "{c1_mass}"
-        }
-      ]
-    }
-  }
-}
-```
-
-## Defining Tree
+## Defining A Tree
 
 A tree must be properly defined in order to be rendered by OML Vision
 
@@ -107,7 +60,7 @@ name: string
 :::
 
 
-This string gives a name to the Tree in the `treeLayouts.json` file.  
+This string gives a name to the Tree.  
 
 <!-- TODO: Change from diagrams to commands -->
 ### diagrams
@@ -225,7 +178,7 @@ The `labelFormat` is rendered in the rows of the Tree shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/treeLayouts.json#L18)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/trees/missions.json#L14)
 
 ![Tree Column Names](./img/treeRowMappingLabelFormat.png)
 

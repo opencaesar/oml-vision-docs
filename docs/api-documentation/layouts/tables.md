@@ -6,13 +6,13 @@ sidebar_position: 2
 
 Tables are created using [tanstack table](https://tanstack.com/table/v8).
 
-:::info tables.json
+:::info tables directory
 
-Create a `src/vision/layouts/tables.json` file (case-sensitive)
+Create a `src/vision/layouts/tables` directory (case-sensitive)
 
 :::
 
-The `src/vision/layouts/tables.json` file is responsible for: 
+The `src/vision/layouts/tables` directory is responsible for: 
 
 - Defining what OML Vision Tables can render
   - Name of the Table
@@ -21,59 +21,12 @@ The `src/vision/layouts/tables.json` file is responsible for:
   - Queries that the Table's content needs
   - How to map Table queries to columns
 
-It is formatted as a JSON data structure.
+Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tables)
 
-```json
-{
-  "objectives": {
-    "name": "Objectives",
-    "diagrams": {
-      "all-rows": "objectives-diagram"
-    },
-    "columnNames": {
-      "o1_id": "Objective 1 ID",
-      "o1_name": "Objective 1 Name",
-      "o2_id": "Objective 2 ID",
-      "o2_name": "Objective 2 Name"
-    },
-    "queries": {
-      "o1_id": "objectives.sparql",
-      "o1_name": "objectives.sparql",
-      "o2_id": "objectives.sparql",
-      "o2_name": "objectives.sparql"
-    },
-    "rowMapping": {
-      "id": "o1_id",
-      "name": "Objectives",
-      "labelFormat": "Objective"
-    }
-  },
-  "connections": {
-    "name": "Connections",
-    "diagrams": {
-      "all-rows": "connections-diagram"
-    },
-    "columnNames": {
-      "c1_name": "Connection 1 Name",
-      "c2_name": "Connection 2 Name"
-    },
-    "queries": {
-      "c1_name": "connections.sparql",
-      "c2_name": "connections.sparql"
-    },
-    "rowMapping": {
-      "id": "c1_name",
-      "name": "Connections",
-      "labelFormat": "Connection"
-    }
-  }
-}
-```
-
-## Defining Table
+## Defining A Table
 
 A table must be properly defined in order to be rendered by OML Vision
 
@@ -107,7 +60,7 @@ name: string
 :::
 
 
-This string gives a name to the table in the `tableLayouts.json` file.  
+This string gives a name to the table.  
 
 <!-- TODO: Change from diagrams to commands -->
 ### diagrams
@@ -249,7 +202,7 @@ The `labelFormat` is rendered in the rows of the Table shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json#L25)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tables/objectives.json#L25)
 
 ![Table String Interpolation](./img/tableStringInterpolation.png)
 
