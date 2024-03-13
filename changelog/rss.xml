@@ -4,10 +4,32 @@
         <title>OML Vision Docs Blog</title>
         <link>https://opencaesar.github.io/oml-vision-docs/changelog</link>
         <description>OML Vision Docs Blog</description>
-        <lastBuildDate>Tue, 13 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 13 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v0.2.5 Caloris Basin]]></title>
+            <link>https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin</link>
+            <guid>https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin</guid>
+            <pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[v0.2.5 Caloris Basin]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v025-caloris-basin">v0.2.5 Caloris Basin<a href="https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin#v025-caloris-basin" class="hash-link" aria-label="Direct link to v0.2.5 Caloris Basin" title="Direct link to v0.2.5 Caloris Basin">​</a></h2>
+<p><img loading="lazy" alt="JHU APL Caloris Basin" src="https://opencaesar.github.io/oml-vision-docs/assets/images/jhuapl_caloris_basin-3e06b4bc40a7ce31358180faec0e130c.png" width="1992" height="1958" class="img_ev3q"></p>
+<p>Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution Of Washington</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed">Fixed<a href="https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin#fixed" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Table, Tree, and Diagram Views: cannot generate a view when there are more than 2 sets of layouts objects that contain the "children" attribute in the pages.json file <a href="https://github.com/opencaesar/oml-vision/pull/37" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/37</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a href="https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin#added" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Table, Tree, and Diagram Views: refactor layouts to support viewpoint definitions for each page <a href="https://github.com/opencaesar/oml-vision/pull/33" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/33</a></li>
+<li>Sidebar: add UI indication that data has been loaded into Fuseki RDF Triplestore <a href="https://github.com/opencaesar/oml-vision/pull/34" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/34</a></li>
+<li>Tree View: add ability to specify and edit columns <a href="https://github.com/opencaesar/oml-vision/pull/36" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/36</a></li>
+</ul>]]></content:encoded>
+            <category>oml</category>
+            <category>vscode</category>
+        </item>
         <item>
             <title><![CDATA[v0.2.0 Mercury]]></title>
             <link>https://opencaesar.github.io/oml-vision-docs/changelog/mercury</link>
