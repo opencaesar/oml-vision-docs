@@ -17,4 +17,4 @@ Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie 
 ### Added
 - Table, Tree, and Diagram Views: refactor layouts to support viewpoint definitions for each page https://github.com/opencaesar/oml-vision/pull/33
 - Sidebar: add UI indication that data has been loaded into Fuseki RDF Triplestore https://github.com/opencaesar/oml-vision/pull/34
-- Tree View: add ability to specify and edits columns https://github.com/opencaesar/oml-vision/pull/36
+- Tree View: add ability to specify and edit columns https://github.com/opencaesar/oml-vision/pull/36
