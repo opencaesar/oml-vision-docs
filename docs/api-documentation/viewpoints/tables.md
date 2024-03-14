@@ -8,11 +8,11 @@ Tables are created using [tanstack table](https://tanstack.com/table/v8).
 
 :::info tables directory
 
-Create a `src/vision/layouts/tables` directory (case-sensitive)
+Create a `src/vision/viewpoints/tables` directory (case-sensitive)
 
 :::
 
-The `src/vision/layouts/tables` directory is responsible for: 
+The `src/vision/viewpoints/tables` directory is responsible for: 
 
 - Defining what OML Vision Tables can render
   - Name of the Table
@@ -24,7 +24,7 @@ The `src/vision/layouts/tables` directory is responsible for:
 Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tables)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/viewpoints/tables)
 
 ## Defining A Table
 
@@ -202,7 +202,7 @@ The `labelFormat` is rendered in the rows of the Table shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tables/objectives.json#L25)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/viewpoints/tables/objectives.json#L25)
 
 ![Table String Interpolation](./img/tableStringInterpolation.png)
 

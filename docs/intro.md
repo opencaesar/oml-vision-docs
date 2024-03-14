@@ -79,7 +79,7 @@ OML Vision is designed to work with OML (Ontological Modeling Language) models.
 Tutorials on how to create an OML model from scratch can be found [here](https://www.opencaesar.io/oml-tutorials/)
 
 :::danger No OML Vision viewpoints defined in above tutorial
-OML Vision works with viewpoints which will be covered in `Layouts` found [here](/docs/category/layouts)
+OML Vision works with viewpoints which will be covered in `Viewpoints` found [here](/docs/category/viewpoints)
 :::
 
 ### Use existing OML model

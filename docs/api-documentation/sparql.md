@@ -37,9 +37,9 @@ If you feel comfortable working with notebooks you can use SPARQL Notebooks to f
 
 ### String Interpolation
 
-OML Vision supports string interpolation with the queries that were formatted for all layouts (Tables, Trees, or Diagrams).  The format is `"{string}"`  
+OML Vision supports string interpolation with the queries that were formatted for all viewpoints (Tables, Trees, or Diagrams).  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json#L25)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/viewpoints/diagrams/components.json#L11)
 
-![Table String Interpolation](./layouts/img/tableStringInterpolation.png)
+![Table String Interpolation](./viewpoints/img/tableStringInterpolation.png)
 
