@@ -28,7 +28,7 @@ The `src/vision/layouts/pages.json` file is responsible for:
 It is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/pages.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/layouts/src/vision/layouts/pages.json)
 
 ## Home Page
 
@@ -99,9 +99,9 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/tables)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/trees)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/diagrams)
 
 :::
 
@@ -174,9 +174,9 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/tables)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/trees)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/diagrams)
 
 :::
 
@@ -309,9 +309,9 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/tables)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/trees)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/v0.2.5/api-documentation/layouts/diagrams)
 
 :::
 

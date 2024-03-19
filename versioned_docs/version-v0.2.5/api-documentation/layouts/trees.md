@@ -24,7 +24,7 @@ The `src/vision/layouts/trees` directory is responsible for:
 Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/trees)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/tree/layouts/src/vision/layouts/trees)
 
 ## Defining A Tree
 
@@ -178,7 +178,7 @@ The `labelFormat` is rendered in the rows of the Tree shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/trees/missions.json#L14)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/layouts/src/vision/layouts/trees/missions.json#L14)
 
 ![Tree Column Names](./img/treeRowMappingLabelFormat.png)
 

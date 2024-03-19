@@ -25,7 +25,7 @@ The `src/vision/layouts/diagrams` directory is responsible for:
 Each file in the directory is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/diagrams)
+An example of what this looks like is seen below with the source code found [here](hhttps://github.com/pogi7/kepler16b-example/tree/layouts/src/vision/layouts/diagrams)
 
 ## Defining A Diagram
 
@@ -159,7 +159,7 @@ The `labelFormat` is rendered in the rows of the Diagram shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`.  Please visit the sparql section of the documentation for more info located [here](/docs/api-documentation/sparql)  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/diagrams/components.json#L11)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/layouts/src/vision/layouts/diagrams/components.json#L11)
 
 ![Diagram Column Names](./img/diagramRowMappingLabelFormat.png)
 

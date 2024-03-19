@@ -24,7 +24,7 @@ The `src/vision/layouts/tables.json` file is responsible for:
 It is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/layout_files/src/vision/layouts/tableLayouts.json)
 
 ```json
 {
@@ -249,7 +249,7 @@ The `labelFormat` is rendered in the rows of the Table shown in the red boxes.
 
 OML Vision supports string interpolation with the queries that were formatted.  The format is `"{string}"`  
 
-An example is found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/tableLayouts.json#L25)
+An example is found [here](https://github.com/pogi7/kepler16b-example/blob/layout_files/src/vision/layouts/tableLayouts.json#L25)
 
 ![Table String Interpolation](./img/tableStringInterpolation.png)
 

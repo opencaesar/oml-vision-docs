@@ -28,7 +28,7 @@ The `src/vision/layouts/pages.json` file is responsible for:
 It is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/pages.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/layouts/src/vision/layouts/pages.json)
 
 ```json
 [

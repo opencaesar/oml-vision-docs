@@ -79,7 +79,7 @@ OML Vision is designed to work with OML (Ontological Modeling Language) models.
 Tutorials on how to create an OML model from scratch can be found [here](https://www.opencaesar.io/oml-tutorials/)
 
 :::danger No OML Vision viewpoints defined in above tutorial
-OML Vision works with viewpoints which will be covered in `Layouts` found [here](/docs/category/layouts)
+OML Vision works with viewpoints which will be covered in `Layouts` found [here](/docs/v0.2.5/category/layouts)
 :::
 
 ### Use existing OML model
@@ -124,7 +124,7 @@ You can also run this command from the command line using
 ```java
 ./gradlew clean
 ```
-Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle) file for a list of commands
+Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/layouts/build.gradle) file for a list of commands
 :::
 
 6. Click `Run owlLoad` (This will load data into the in-memory RDF triplestore)
@@ -135,7 +135,7 @@ You can also run this command from the command line using
 ```java
 ./gradlew owlLoad
 ```
-Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle) file for a list of commands
+Look in the [build.gradle](https://github.com/pogi7/kepler16b-example/blob/layouts/build.gradle) file for a list of commands
 :::
 
 7. Click `Objectives`
