@@ -28,7 +28,9 @@ An example of what this looks like is seen below with the source code found [her
 
 ## Defining A Table
 
-A table must be properly defined in order to be rendered by OML Vision
+A table must be properly defined in order to be rendered by OML Vision.
+
+The following are JSON key-value pairs that can be defined for a Table.
 
 ### path
 :::danger REQUIRED
