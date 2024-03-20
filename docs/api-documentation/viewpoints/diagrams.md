@@ -29,7 +29,9 @@ An example of what this looks like is seen below with the source code found [her
 
 ## Defining A Diagram
 
-A Diagram must be properly defined in order to be rendered by OML Vision
+A Diagram must be properly defined in order to be rendered by OML Vision.
+
+The following are JSON key-value pairs that can be defined for a Diagram.
 
 ### Terminology
 OML Vision defines a node and edge as follows:
