@@ -18,7 +18,7 @@ Create a `src/vision/layouts` directory
 
 It contains the specification needed for OML Vision to format the different views (i.e. Table, Tree, Diagram, etc.) that are rendered by the extension.
 
-Detailed information about the layouts directory can be found [here](/docs/category/layouts)
+Detailed information about the layouts directory can be found [here](/docs/v0.2.0/category/layouts)
 
 ## Sparql
 

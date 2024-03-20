@@ -29,7 +29,7 @@ In OML Vision, the `build.gradle` file is responsible for:
 
 Examples of correctly formatted `build.gradle` files for OML Vision are found here:
 
-- [Kepler16b build.gradle](https://github.com/pogi7/kepler16b-example/blob/main/build.gradle)
+- [Kepler16b build.gradle](https://github.com/pogi7/kepler16b-example/blob/layouts/build.gradle)
 - [Open Source Rover build.gradle](https://github.com/UTNAK/open-source-rover/blob/main/build.gradle)
 
 You can read more about `build.gradle` files [here](https://docs.gradle.org/current/userguide/build_file_basics.html)

@@ -12,13 +12,13 @@ It contains the configuration for the update and query API endpoint for the in-m
 
 Detailed information about the config directory can be found [here](/docs/api-documentation/config)
 
-## Layouts
+## Viewpoints
 
-Create a `src/vision/layouts` directory
+Create a `src/vision/viewpoints` directory
 
 It contains the specification needed for OML Vision to format the different views (i.e. Table, Tree, Diagram, etc.) that are rendered by the extension.
 
-Detailed information about the layouts directory can be found [here](/docs/category/layouts)
+Detailed information about the viewpoints directory can be found [here](/docs/category/viewpoints)
 
 ## Sparql
 
@@ -32,9 +32,8 @@ Detailed information about the config directory can be found [here](/docs/api-do
 
 The following directories are required for OML Vision to work properly.
 
-
 - `src/vision/config`
-- `src/vision/layouts`
+- `src/vision/viewpoints`
 - `src/vision/sparql`
 
 An error like this will occur without those directories

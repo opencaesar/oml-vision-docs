@@ -6,11 +6,11 @@ sidebar_position: 1
 
 :::info pages.json
 
-Create a `src/vision/layouts/pages.json` file (case-sensitive)
+Create a `src/vision/viewpoints/pages.json` file (case-sensitive)
 
 :::
 
-The `src/vision/layouts/pages.json` file is responsible for: 
+The `src/vision/viewpoints/pages.json` file is responsible for: 
 
 - Defining what OML Vision can render
   - Home Page
@@ -28,7 +28,7 @@ The `src/vision/layouts/pages.json` file is responsible for:
 It is formatted as a JSON data structure.
 
 <!-- TODO: Change to opencaesar repo -->
-An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/layouts/pages.json)
+An example of what this looks like is seen below with the source code found [here](https://github.com/pogi7/kepler16b-example/blob/main/src/vision/viewpoints/pages.json)
 
 ## Home Page
 
@@ -99,31 +99,9 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
-
-:::
-
-### treeIcon (DEPRECATED)
-:::note OPTIONAL
-
-```typescript
-treeIcon: string
-```
-
-:::
-
-
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
-
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Home Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension shown in the red boxes.
-
-![Path Home Page](./img/treeIconHomePage.png)
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/viewpoints/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/viewpoints/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/viewpoints/diagrams.md)
 
 :::
 
@@ -174,29 +152,9 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
-
-:::
-
-### treeIcon (DEPRECATED)
-:::note OPTIONAL
-
-```typescript
-treeIcon: string
-```
-
-:::
-
-
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
-
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Child Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension.
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/viewpoints/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/viewpoints/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/viewpoints/diagrams.md)
 
 :::
 
@@ -280,7 +238,7 @@ path: string
 
 This string defines the path of the `Child Page`. 
 
-**Remember this string as it will be needed for the layouts of the tables, trees, and diagrams**
+**Remember this string as it will be needed for the viewpoints of the tables, trees, and diagrams**
 
 :::tip USER INTERFACE
 
@@ -309,53 +267,8 @@ The type of webview determines the icon that is rendered in the sidebar.
 These are the current types
 1. `home` -  This type renders the Home Page.
 2. `group` - This type groups webviews together in the Home Page and sidebar. Grouping is only done in the UI.
-3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/layouts/tables.md)
-4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/layouts/trees.md)
-5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/layouts/diagrams.md)
+3. `table` - This type specifies the webview to render a table.  For more info, look [here](/docs/api-documentation/viewpoints/tables.md)
+4. `tree` - This type specifies the webview to render a tree.  For more info, look [here](/docs/api-documentation/viewpoints/trees.md)
+5. `diagram` - This type specifies the webview to render a diagram.  For more info, look [here](/docs/api-documentation/viewpoints/diagrams.md)
 
 :::
-
-#### treeIcon (DEPRECATED)
-:::note OPTIONAL
-
-```typescript
-treeIcon: string
-```
-
-:::
-
-
-This string defines the icon to be rendered in the sidebar next to the `Title` of the page. 
-
-**A full list of available icons can be seen [here](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing).  Use the `default codicon ID` as the value of the `treeIcon`**
-
-:::tip USER INTERFACE
-
-The `Child Page` icon of the `treeIcon` is rendered in the sidebar for the OML Vision extension.
-
-:::
-
-#### isTree (DEPRECATED)
-:::note OPTIONAL
-
-```typescript
-isTree: boolean
-```
-
-:::
-
-
-This bool specifies whether or not the `Child Page` will be a tree.  Set `isTree` to `true` to turn the `Child Page` into a tree.
-
-
-#### isDiagram (DEPRECATED)
-:::note OPTIONAL
-
-```typescript
-isDiagram: boolean
-```
-
-:::
-
-
-This bool specifies whether or not the `Child Page` will be a diagram.  Set `isDiagram` to `true` to turn the `Child Page` into a diagram.
