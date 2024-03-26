@@ -142,6 +142,8 @@ The type defines what component to be rendered.
 These are the current types
 1. `text` -  This type renders a [VSCode Text Field](https://github.com/microsoft/vscode-webview-ui-toolkit/tree/main/src/text-field).
 2. `radio` -  This type renders a [VSCode Radio](https://github.com/microsoft/vscode-webview-ui-toolkit/tree/main/src/radio).
+3. `number` -  This type renders a [VSCode Number Field](https://github.com/opencaesar/oml-vision/tree/9b93a3c99c4f07172fa1545ad21572d8d03d4616/view/src/components/shared/VSCodeNumberField).  
+**The VSCodeNumberField is a custom component that is not a part of the standard [vscode-webview-ui-toolkit](https://github.com/microsoft/vscode-webview-ui-toolkit) library**
 :::
 
 ### helpExpression
