@@ -4,10 +4,31 @@
         <title>OML Vision Docs Blog</title>
         <link>https://opencaesar.github.io/oml-vision-docs/changelog</link>
         <description>OML Vision Docs Blog</description>
-        <lastBuildDate>Wed, 13 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 27 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[v0.2.6 Rembrandt Basin]]></title>
+            <link>https://opencaesar.github.io/oml-vision-docs/changelog/rembrandt-basin</link>
+            <guid>https://opencaesar.github.io/oml-vision-docs/changelog/rembrandt-basin</guid>
+            <pubDate>Wed, 27 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[v0.2.6 Rembrandt Basin]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v026-rembrandt-basin">v0.2.6 Rembrandt Basin<a href="https://opencaesar.github.io/oml-vision-docs/changelog/rembrandt-basin#v026-rembrandt-basin" class="hash-link" aria-label="Direct link to v0.2.6 Rembrandt Basin" title="Direct link to v0.2.6 Rembrandt Basin">​</a></h2>
+<p><img loading="lazy" alt="JHU APL Rembrandt Basin" src="https://opencaesar.github.io/oml-vision-docs/assets/images/jhuapl_rembrandt_basin-48a77476705dd3f6a2cdf43ed4e13daa.png" width="860" height="867" class="img_ev3q"></p>
+<p>Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution Of Washington</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a href="https://opencaesar.github.io/oml-vision-docs/changelog/rembrandt-basin#added" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Property View: Allows users to see the properties of elements selected in the webview <a href="https://github.com/opencaesar/oml-vision/pull/42" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/42</a></li>
+<li>Property View: Allow users to specify a <code>number</code> type for controls in the property sheet <a href="https://github.com/opencaesar/oml-vision/pull/44" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/pull/44</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="modified">Modified<a href="https://opencaesar.github.io/oml-vision-docs/changelog/rembrandt-basin#modified" class="hash-link" aria-label="Direct link to Modified" title="Direct link to Modified">​</a></h3>
+<ul>
+<li>Viewpoints: Listen to viewpoints directory instead of layouts directory (Change layouts directory to viewpoints directory) <a href="https://github.com/opencaesar/oml-vision/issues/40" target="_blank" rel="noopener noreferrer">https://github.com/opencaesar/oml-vision/issues/40</a></li>
+</ul>]]></content:encoded>
+            <category>oml</category>
+            <category>vscode</category>
+        </item>
         <item>
             <title><![CDATA[v0.2.5 Caloris Basin]]></title>
             <link>https://opencaesar.github.io/oml-vision-docs/changelog/caloris-basin</link>
